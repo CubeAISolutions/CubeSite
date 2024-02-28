@@ -40,7 +40,8 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
- <body oncontextmenu="return false;">
+ <!-- <body oncontextmenu="return false;"> -->
+  <body>
     <!-- Header Section Start -->
     <header class="header">
       <div class="container-fluid">
@@ -74,7 +75,7 @@
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
               <div class="carousel-background">
-                <img src="../cube/img/sliderDA-1.jpg" alt="" />
+                <img src="img/sliderDA-1.jpg" alt="" />
               </div>
               <div class="carousel-container">
                 <div class="carousel-content">
@@ -89,7 +90,7 @@
 
             <div class="carousel-item">
               <div class="carousel-background">
-                <img src="../cube/img/sliderAI-2.jpg" alt="" />
+                <img src="img/sliderAI-2.jpg" alt="" />
               </div>
               <div class="carousel-container">
                 <div class="carousel-content">
@@ -104,7 +105,7 @@
 
             <div class="carousel-item">
               <div class="carousel-background">
-                <img src="../cube/img/sliderAPP-3.jpg" alt="" />
+                <img src="img/sliderAPP-3.jpg" alt="" />
               </div>
               <div class="carousel-container">
                 <div class="carousel-content">
@@ -119,7 +120,7 @@
 
             <div class="carousel-item">
               <div class="carousel-background">
-                <img src="../cube/img/sliderDI-4.jpg" alt="" />
+                <img src="img/sliderDI-4.jpg" alt="" />
               </div>
               <div class="carousel-container">
                 <div class="carousel-content">
@@ -277,9 +278,11 @@
         </div>
       </div>
     </section>
-    <!-- About Us Section End -->
 
+    <!-- About Us Section End -->
+   
     <!-- Services Section Start -->
+
     <section id="services" class="services">
       <div class="container">
         <header class="section-header">
@@ -292,63 +295,226 @@
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="single-service">
-              <i class="ion-ios-desktop"></i>
+              <img src="img/data analisys logo.png" alt=" Data Analytics logo" class="service-logo"/>
               <h4><a href="">Data Analytics</a></h4>
-              <p></p>
+              <div class="overlay" id="overlay"></div>
+              <div class="popup" id="data-analysis-popup">
+                <p>"We deliver comprehensive data analytics services,
+                  leveraging advanced tools and techniques to uncover actionable insights from your datasets.
+                  Our expert team employs statistical analysis, machine learning, and data visualization,
+                  providing valuable intelligence for informed decision-making".
+                </p>
+                <button onclick="closePopup('data-analysis-popup')">Close</button>
+              </div>
+              <button class="btn-open-popup" onclick="openPopup('data-analysis-popup')">Know more</button>
+              <script>
+                function openPopup(popupId) {
+                 document.getElementById('overlay').style.display = 'block';
+                 document.getElementById(popupId).style.display = 'block';
+                }
+                function closePopup(popupId) {
+                  document.getElementById('overlay').style.display = 'none';
+                  document.getElementById(popupId).style.display = 'none';
+                }
+              </script>
             </div>
           </div>
+
+
           <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="single-service">
-              <i class="ion-ios-laptop"></i>
+             <img src="img/ai logo.png" alt=" Artificial Intelligence Logo" class="service-logo"/>
               <h4><a href="">AI</a></h4>
-              <p></p>
+              <div class="overlay" id="overlay"></div>
+              <div class="popup" id="ai-popup">
+                <p>
+                  "We provide Al (Artificial Intelligence) 
+                  involves creating smart systems capable of human-like tasks. 
+                  Where it reduces the work complexities and makes it simple,
+                  we ensure that your is finish by a by single click solution and provides 
+                  friendly environment with Industrial standard".
+                </p>
+                <button onclick="closePopup('ai-popup')">Close</button>
+              </div>
+              <button class="btn-open-popup" onclick="openPopup('ai-popup')">Know more</button>
+              <script>
+                function openPopup(popupId) {
+                  document.getElementById('overlay').style.display = 'block';
+                  document.getElementById(popupId).style.display = 'block';
+                }
+                function closePopup(popupId) {
+                  document.getElementById('overlay').style.display = 'none';
+                  document.getElementById(popupId).style.display = 'none';
+                }
+              </script>
             </div>
           </div>
+
           <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="single-service">
-              <i class="ion-ios-tablet-portrait"></i>
+              <img src="img/smartphone logo.png" alt=" Machine Learning Logo" class="service-logo"/>
               <h4><a href="">ML</a></h4>
-              <p></p>
+             <div class="overlay" id="overlay"></div>
+              <div class="popup" id="ml-popup">
+                <p>
+                  "We provide ML (Machine Learning) involves creating smart systems capable of human-like tasks.
+                  Where it reduces the work complexities and makes it simple,
+                  we ensure that your is finish by a by single click solution 
+                  and provides friendly environment with Industrial standard".
+                </p>
+                <button onclick="closePopup('ml-popup')">Close</button>
+              </div>
+              <button class="btn-open-popup" onclick="openPopup('ml-popup')">Know more</button>
+              <script>
+                function openPopup(popupId) {
+                  document.getElementById('overlay').style.display = 'block';
+                  document.getElementById(popupId).style.display = 'block';
+                }
+                function closePopup(popupId) {
+                  document.getElementById('overlay').style.display = 'none';
+                  document.getElementById(popupId).style.display = 'none';
+                }
+              </script>
             </div>
           </div>
+
           <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="single-service">
-              <i class="ion-ios-phone-portrait"></i>
+               <img src="img/cyber-security logo.png" alt=" Cuber Security Logo" class="service-logo"/>
               <h4><a href="">Cuber Security</a></h4>
-              <p></p>
+              <div class="overlay" id="overlay"></div>
+              <div class="popup" id="cybersecurity-popup">
+               <p>"We specialize in cybersecurity services,
+                  ensuring robust protection for your digital assets. 
+                  Our comprehensive approach includes threat assessment, risk management, and 
+                  implementation of cutting-edge solutions to safeguard your organization against cyber threats.
+                  With our expertise, your digital environment remains secure and resilient".
+                </p>
+                <button onclick="closePopup('cybersecurity-popup')">Close</button>
+              </div>
+              <button class="btn-open-popup" onclick="openPopup('cybersecurity-popup')">Know more</button>
+              <script>
+                function openPopup(popupId) {
+                  document.getElementById('overlay').style.display = 'block';
+                  document.getElementById(popupId).style.display = 'block';
+                }
+                function closePopup(popupId) {
+                  document.getElementById('overlay').style.display = 'none';
+                  document.getElementById(popupId).style.display = 'none';
+                }
+              </script>
             </div>
           </div>
+
           <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="single-service">
-              <i class="ion-ios-desktop"></i>
+              <img src="img/mobile-development logo.png" alt="Web & App Design Logo" class="service-logo"/>
               <h4><a href="">Web & App Design</a></h4>
-              <p></p>
+              <div class="popup" id="web-popup">
+                <p>"We code & convert design files into responsive, pixel-perfect HTML-CSS web pages.
+                  We bring User Interfaces to life by creating interactive "Front End" for websites and
+                  applications".
+                </p>
+                <button onclick="closePopup('web-popup')">Close</button>
+              </div>
+              <button class="btn-open-popup" onclick="openPopup('web-popup')">Know more</button>
+              <script>
+                function openPopup(popupId) {
+                  document.getElementById('overlay').style.display = 'block';
+                  document.getElementById(popupId).style.display = 'block';
+                }
+                function closePopup(popupId) {
+                  document.getElementById('overlay').style.display = 'none';
+                  document.getElementById(popupId).style.display = 'none';
+                }
+              </script>
             </div>
           </div>
+
+
           <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="single-service">
-              <i class="ion-ios-laptop"></i>
+              <img src="img/web development logo.png" alt=" web & app Development Logo" class="service-logo"/>
               <h4><a href="">Web & App Development</a></h4>
-              <p></p>
+              <div class="popup" id="app-dev-popup">
+                <p>"We provide rich and Interactive experience by our Advanced Standards.
+                  We offer cross-platform development solutions, 
+                  ensuring your app works seamlessly across 
+                  Android and iOS without compromising quality".
+                </p>  
+                <button onclick="closePopup('app-dev-popup')">Close</button>
+              </div>
+              <button class="btn-open-popup" onclick="openPopup('app-dev-popup')">Know more</button>
+              <script>
+                function openPopup(popupId) {
+                  document.getElementById('overlay').style.display = 'block';
+                  document.getElementById(popupId).style.display = 'block';
+                }
+                function closePopup(popupId) {
+                  document.getElementById('overlay').style.display = 'none';
+                  document.getElementById(popupId).style.display = 'none';
+                }
+              </script>
             </div>
           </div>
+
           <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="single-service">
-              <i class="ion-ios-tablet-portrait"></i>
+              <img src="img/social-media logo.png" alt=" DM Logo" class="service-logo"/>
               <h4><a href="">Digital Marketing</a></h4>
-              <p></p>
+              <div class="popup" id="digital-marketing-popup">
+                <p>We understand your market landscape and competitors.
+                  Our research and analysis lay the groundwork for effective marketing strategies.
+                  Drive business growth with our lead generation and conversion-focused strategies.
+                </p>  
+                <button onclick="closePopup('digital-marketing-popup')">Close</button>
+              </div>
+              <button class="btn-open-popup" onclick="openPopup('digital-marketing-popup')">Know more</button>
+              <script>
+                function openPopup(popupId) {
+                  document.getElementById('overlay').style.display = 'block';
+                  document.getElementById(popupId).style.display = 'block';
+                }
+                function closePopup(popupId) {
+                  document.getElementById('overlay').style.display = 'none';
+                  document.getElementById(popupId).style.display = 'none';
+                }
+              </script>
             </div>
           </div>
+
           <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="single-service">
-              <i class="ion-ios-phone-portrait"></i>
+              <img src="img/workshop logo.png" alt=" BC Logo" class="service-logo"/>
               <h4><a href="">Business Consulting</a></h4>
-              <p></p>
+              <div class="overlay" id="overlay"></div>
+              <div class="popup" id="business-consulting-popup">
+               <p>"We offer expert business consulting services, 
+                  providing tailored solutions to enhance efficiency, 
+                  strategy, and overall performance.
+                  With a client-centric approach, 
+                  we analyse challenges, develop customized strategies, 
+                  and guide businesses towards sustainable growth and success".
+               </p>
+               <button onclick="closePopup('business-consulting-popup')">Close</button>
+             </div>
+              <button class="btn-open-popup" onclick="openPopup('business-consulting-popup')">Know more</button>
+              <script>
+                function openPopup(popupId) {
+                  document.getElementById('overlay').style.display = 'block';
+                  document.getElementById(popupId).style.display = 'block';
+                }
+                function closePopup(popupId) {
+                  document.getElementById('overlay').style.display = 'none';
+                  document.getElementById(popupId).style.display = 'none';
+                }
+             </script>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Services Section End -->
 
     <!-- Milestone Start -->
@@ -608,6 +774,7 @@
         </script>
       </div>
     </section>
+    
     <!-- Clients Section End -->
 
     <!-- Contact Section Start -->
@@ -640,7 +807,7 @@
               <i class="ion-md-mail"></i>
               <h3>Email</h3>
               <p>
-                <a href="boopathikkv963@gmail.com">cubeaisolutions@gmail.com</a>
+                <a href="#">cubeaisolutions@gmail.com</a>
               </p>
             </div>
           </div>
