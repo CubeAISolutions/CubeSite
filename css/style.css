@@ -81,7 +81,7 @@ h6 {
 }
 
 .header.header-scrolled {
-    background-color: lightgrey;
+    background-color: #ADD8E6;
     padding: 20px 0;
     height: 72px;
     transition: all 0.3s;
@@ -105,21 +105,15 @@ h6 {
 .header .logo img {
     padding: 0;
     margin: 0;
+    max-height: 100%;
 }
 
 .logo-title{
-    color: #4022db;
+    color: #ffffff;
     transition: 0.3s;
-    padding-left: 85px;
 }
 .logo-title:hover{
-    color:#ffffff;
-}
-.logo-img{
-    height: 60px;
-    width: 75px;
-    position: absolute;
-    top: 10px;
+    color:#4022db ;
 }
 
 
@@ -689,6 +683,37 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------- Services Style ----------------- */
 
 /* ---------------- Services Style ----------------- */
@@ -708,14 +733,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-align: center;
     color: #353535;
     font-weight: 400;
-    margin: 40px 20px 38px;
+    margin:30px 0 0;
     transition: all 0.3s;
 }
-.single-service:hover{
-    box-shadow: 0 0 10px #cccccc;
+
+.single-service i {
+    font-size: 64px;
+    color: #4022db;
 }
-
-
 
 .single-service h4,
 .single-service h4 a {
@@ -755,66 +780,31 @@ body.mobile-nav-active #mobile-nav-toggle {
    
   }
   .service-logo{
-   height: 50px;
+    height: 50px;
 }
-.service-logo:hover{
-    transform: scale(1.5);
-}
- 
-/* ------------ Milestone ------------- */
 
-.counter-wrapper{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 1.5rem;
-    padding: 10rem 9%;
-    margin-top: 5rem;
-    position: relative;
-    background-color: lightcyan;
-}
-.counter-wrapper::before{
-    position: absolute;
-    content: '';
-    content: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.counter{
-   text-align: center;   
-   color: #ddd;
-   z-index: 2;
-   position: relative;
-}
-.counter::before{
-    position: absolute;
-    content: '';
-    bottom: -2rem;
-    left: 50%;
-    width: 20%;
-    height: .2rem;
-    background: #4DB7FE;
-    border-radius: .5rem;
-    -webkit-border-radius: .5rem;
-    -moz-border-radius: .5rem;
-    -ms-border-radius: .5rem;
-    -o-border-radius: .5rem;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-}
-.counter .count{
-    font-size: 5rem;
-    margin-bottom: 1rem;    
-}
-.counter p{
-    font-size: 1.4rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-}
+
+
+
+
+
+/* ------------ Milestone ------------- */
+.section-work-data {
+    background: var(--gradientSupport);
+    text-align: center;
+    transition: all 0.7s linear;
+    color: var(--white);
+  }
+  
+  .counter-numbers {
+    font-size: 4.8rem;
+  }
+  
+  .section-work-data p {
+    color: black;
+    text-transform: capitalize;
+  }
+
 /* ------------ Call To Action Section ------------- */
 .call-to-action {
     position: relative;
@@ -1354,11 +1344,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .footer .copyright {
     text-align: center;
     padding-top: 30px;
-    
 }
-.footer .copyright a{
-    color: #dddddd;
-}
+
 
 /* ---------------- Responsive Design -------------- */
 @media (min-width: 1024px) {
@@ -1414,4 +1401,55 @@ body.mobile-nav-active #mobile-nav-toggle {
         margin-bottom: 15px;
         padding: 0;
     }
+}
+
+
+
+
+
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.counter {
+    font-size: 36px;
+    color: #3498db;
+    font-weight: bold;
+    margin: 0;
+}
+
+.counter-label {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Animation */
+.count-up {
+    animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+.level {
+    margin-top: 2rem;
+}
+.level-item {
+    flex-basis: 25%;
 }
